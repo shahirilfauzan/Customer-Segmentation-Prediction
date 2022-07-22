@@ -43,7 +43,7 @@ Additional modules needed: Tensorflow, Sklearn, matplotlib, missingno
 1)Click on this provided link, you will be redirected to [Google Colab](https://colab.research.google.com/drive/18Vys8af6hDNj5ZrSJLih3xLi3OnoW342?usp=sharing),
 
 # Credits
-this dataset is provided by [Kunal Gupta](https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon)
+This dataset is provided by [Kunal Gupta](https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon)
 
 Special thanks for Mr Alex Koh & Dr.Warren NL Loo for the guidance guidance throughout the whole deep learning course.
 
