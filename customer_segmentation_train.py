@@ -25,23 +25,22 @@ import datetime
 import pickle
 import os
 
-
 #%% Constant
 CSV_PATH=os.path.join(os.getcwd(),'dataset','Train.csv')
-MMS_PATH = os.path.join(os.getcwd(),'model','mms.pkl')
-OHE_PATH = os.path.join(os.getcwd(), 'model','ohe_encoder.pkl')
-MODEL_SAVE_PATH = os.path.join(os.getcwd(),'model','model.h5')
+MMS_PATH=os.path.join(os.getcwd(),'model','mms.pkl')
+OHE_PATH=os.path.join(os.getcwd(), 'model','ohe_encoder.pkl')
+MODEL_SAVE_PATH=os.path.join(os.getcwd(),'model','model.h5')
 #%% Step 1) Data Loading
 df = pd.read_csv(CSV_PATH)
 #%% Step 2) Data Inspection
 df.info()
-df = df.drop(labels='id', axis=1)
+df=df.drop(labels='id',axis=1)
 
-cat = list(df.columns[df.dtypes == 'object'])
+cat=list(df.columns[df.dtypes == 'object'])
 cat.append('day_of_month')
 cat.append('term_deposit_subscribed')
 
-con = list(df.columns[(df.dtypes=='int64') | (df.dtypes=='float64')])
+con=list(df.columns[(df.dtypes=='int64') | (df.dtypes=='float64')])
 con.remove('day_of_month')
 con.remove('term_deposit_subscribed')
 
@@ -79,15 +78,15 @@ msno.bar(df)
 
 #too many NaNs inside days_since_prev_campaign_contact, decided to drop it
 
-df = df.drop(labels='days_since_prev_campaign_contact', axis=1)
+df=df.drop(labels='days_since_prev_campaign_contact',axis=1)
 
 #Remove NaNs
 #KNN imputer
-columns_name = df.columns
+columns_name=df.columns
 
-knn_i = KNNImputer()
-df = knn_i.fit_transform(df) #return numpy array
-df = pd.DataFrame(df) # to convert back into dataframe
+knn_i=KNNImputer()
+df=knn_i.fit_transform(df) #return numpy array
+df=pd.DataFrame(df) # to convert back into dataframe
 df.columns = columns_name
 
 df.info()
@@ -98,14 +97,14 @@ df['customer_age'] = np.floor(df['customer_age'])
 df['personal_loan'] = np.floor(df['personal_loan'])
 df['last_contact_duration'] = np.floor(df['last_contact_duration'])
 
-temp = df.describe().T
+temp=df.describe().T
 
 # 3) Remove Duplicate
 df.duplicated().sum()# no duplicate
 #%% Step 4) Features Selection
 
-X = df.drop(labels='term_deposit_subscribed',axis=1)
-y = df['term_deposit_subscribed'].astype(int)
+X=df.drop(labels='term_deposit_subscribed',axis=1)
+y=df['term_deposit_subscribed'].astype(int)
 
 con=['customer_age','balance','last_contact_duration',
      'num_contacts_in_campaign','num_contacts_prev_campaign']
@@ -113,7 +112,7 @@ con=['customer_age','balance','last_contact_duration',
 # CON VS CAT
 #LINEAR REGRESSION
 
-selected_features = []
+selected_features=[]
 
 for i in con:
     lr = LogisticRegression()
@@ -139,9 +138,9 @@ print(selected_features)
 #From above analysis only from continuous features and prev_campaign_outcome
 #from categorical are selected
 
-df = df.loc[:,selected_features] # to c heck the list of selected features
-X = df.drop(labels='term_deposit_subscribed',axis=1)
-y = df['term_deposit_subscribed'].astype(int)
+df=df.loc[:,selected_features] # to c heck the list of selected features
+X=df.drop(labels='term_deposit_subscribed',axis=1)
+y=df['term_deposit_subscribed'].astype(int)
 
 #%% Step 5) Data Preprocessing
 #MMS
@@ -152,8 +151,8 @@ with open(MMS_PATH,'wb')as file:
     pickle.dump(mms,file)
 
 #OHE
-ohe = OneHotEncoder(sparse=False)
-y = ohe.fit_transform(np.expand_dims(y,axis=-1))
+ohe=OneHotEncoder(sparse=False)
+y=ohe.fit_transform(np.expand_dims(y,axis=-1))
 
 with open(OHE_PATH,'wb') as file:
     pickle.dump(ohe,file)
