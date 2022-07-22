@@ -38,10 +38,6 @@ Additional modules needed: Tensorflow, Sklearn, matplotlib, missingno
 ![Matrix](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/Result_Matrix.png)
 
 
-
-
-1)Click on this provided link, you will be redirected to [Google Colab](https://colab.research.google.com/drive/18Vys8af6hDNj5ZrSJLih3xLi3OnoW342?usp=sharing),
-
 # Credits
 This dataset is provided by [Kunal Gupta](https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon)
 
