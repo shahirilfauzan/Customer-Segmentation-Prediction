@@ -10,19 +10,44 @@ The purpose of marketing campaign is to collect customer’s needs and overall s
 
 For this project, by using the dataset from the marketing campaigns to develop deep learning model to predict the outcome of the campaign. To know whether the people attending the campaign are subscribed for term deposit or not.
 
-# How to install and run the project
+# How to Install and Run the Project
+To run this model on your pc, you may need to download all things inside the repository. All the folder inside are already arranged according to the coding, so it's not recommend to change the folder path such as model to another path. By using the spyder you may can run the customer_segmentation_train.py to get the result, make sure that customer_segmentation_module.py are in the same path to running the coding without any error.
+
+Software required: Spyder, Python(preferably the latest version)
+
+Additional modules needed: Tensorflow, Sklearn, matplotlib, missingno
+
+# Model Architecture
+
+![Model Architecture](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/model.png)
+
+# Execution
+
+## Training Loss
+![Training Loss](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/Hist_graph_loss.png)
+
+## Training Accuracy
+![Training Accuracy](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/Hist_graph_acc.png)
+
+## TensorBoard Result
+![TensorBoard](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/TensorBoard.PNG)
+
+# Project Outcome
+![F1score](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/F1_Score.PNG)
+
+![Matrix](https://github.com/shahirilfauzan/Customer-Segmentation-Prediction/blob/3ca67432992c6d866777fd357526adaca2b06f27/static/Result_Matrix.png)
+
+
+
+
 1)Click on this provided link, you will be redirected to [Google Colab](https://colab.research.google.com/drive/18Vys8af6hDNj5ZrSJLih3xLi3OnoW342?usp=sharing),
-you may need to sign in to your Google account to access it.
-
-2)You may need to download 'models' folder from the depository section and re-upload it in Google colab left panel before you can run it.
-
-For pc user: 
-Software required: Spyder, Python(preferably the latest version) 
-Modules needed: Tensorflow, Sklearn
 
 # Credits
-this dataset is provided by [Ankit Kurmi](https://github.com/Ankit152),[Dataset](https://raw.githubusercontent.com/Ankit152/IMDB-sentiment-analysis/master/IMDB-Dataset.csv)
+this dataset is provided by [Kunal Gupta](https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon)
 
+Special thanks for Mr Alex Koh & Dr.Warren NL Loo for the guidance guidance throughout the whole deep learning course.
+
+# These Codes powered by
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
  ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
  ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
