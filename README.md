@@ -41,8 +41,6 @@ Additional modules needed: Tensorflow, Sklearn, matplotlib, missingno
 # Credits
 This dataset is provided by [Kunal Gupta](https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon)
 
-Special thanks for Dr.Warren NL Loo & Mr Alex Koh for the guidance guidance throughout the whole deep learning course.
-
 # These Codes powered by
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
  ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
