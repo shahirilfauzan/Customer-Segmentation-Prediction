@@ -11,7 +11,7 @@ The purpose of marketing campaign is to collect customer’s needs and overall s
 For this project, by using the dataset from the marketing campaigns to develop deep learning model to predict the outcome of the campaign. To know whether the people attending the campaign are subscribed for term deposit or not.
 
 # How to Install and Run the Project
-To run this model on your pc, you may need to download all things inside the repository. All the folder inside are already arranged according to the coding, so it's not recommend to change the folder path such as "model" folder to another path. By using the spyder you may can run the customer_segmentation_train.py to get the result, make sure that customer_segmentation_module.py are in the same path to running the coding without any error.
+To run this model on your pc, you may need to download all things inside the repository. All the folder inside are already arranged according to the coding, so it's not recommend to change the folder path such as "model" folder to another path. By using the spyder you can run the customer_segmentation_train.py to get the result, make sure that customer_segmentation_module.py are in the same path to running the coding without any error.
 
 Software required: Spyder, Python(preferably the latest version)
 
